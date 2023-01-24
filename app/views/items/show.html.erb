@@ -1,6 +1,11 @@
         <div class="jumbotron">
             <h2><%= @item.title %></h2>
             <p><%= @item.description %></p>
+            <% if @item.completed? %>
+                <p style="opacity: 0.5;">Has already been completed</p>
+            <% else %>
+                <h5 style="opacity: 0.5;">Has not been completed yet!</h5>
+            <% end %>
         </div>
 
             <%= link_to "Back", root_path, class: 'btn btn-secondary' %>
