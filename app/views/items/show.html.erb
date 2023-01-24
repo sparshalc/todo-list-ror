@@ -1,7 +1,8 @@
-
-        <h2><%= @item.title %></h2>
+        <div class="jumbotron">
+            <h2><%= @item.title %></h2>
             <p><%= @item.description %></p>
+        </div>
 
-            <%= link_to "Back", root_path %>
-            <%= link_to "Edit", edit_item_path(@item) %>
-            <%= link_to 'Destroy', @item,data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+            <%= link_to "Back", root_path, class: 'btn btn-secondary' %>
+            <%= link_to "Edit", edit_item_path(@item), class: 'btn btn-secondary' %>
+            <%= link_to 'Destroy', @item,data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} , class: 'btn btn-secondary'%>
