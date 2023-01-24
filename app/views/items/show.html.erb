@@ -1,0 +1,7 @@
+
+        <h2><%= @item.title %></h2>
+            <p><%= @item.description %></p>
+
+            <%= link_to "Back", root_path %>
+            <%= link_to "Edit", edit_item_path(@item) %>
+            <%= link_to 'Destroy', @item,data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
